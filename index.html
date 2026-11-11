@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>THE CELL | Biology</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f1f5f9;color:#172033}
+header{background:linear-gradient(135deg,#10234c,#2563eb,#0eaaa5);color:white;text-align:center;padding:45px 15px}
+header h1{font-size:42px;margin:0}
+header p{color:#dbeafe}
+nav{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;background:white;padding:15px;position:sticky;top:0;z-index:5;box-shadow:0 3px 12px #0002}
+nav button{padding:13px 24px;border:0;border-radius:12px;background:#e2e8f0;font-weight:bold;font-size:15px;cursor:pointer}
+nav button.active,nav button:hover{background:#2563eb;color:white}
+main{max-width:1100px;margin:auto;padding:25px 16px}
+.page{display:none}
+.page.active{display:block;animation:fade .3s}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+h2{color:#1d4ed8;text-align:center;font-size:30px}
+.intro{background:white;padding:20px;border-radius:15px;margin:20px 0;line-height:1.8}
+.main-image{width:100%;max-width:650px;height:350px;object-fit:contain;display:block;margin:20px auto;background:white;border-radius:18px;padding:10px;box-shadow:0 5px 20px #0001}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.card{background:white;border-radius:15px;padding:20px;box-shadow:0 4px 15px #0001;border-top:4px solid #2563eb}
+.card h3{color:#2563eb;margin-top:0}
+.card p{line-height:1.8;color:#475569}
+.card small{color:#64748b}
+footer{text-align:center;background:#10234c;color:white;padding:25px;margin-top:40px}
+@media(max-width:600px){header h1{font-size:32px}nav button{padding:11px 15px}.main-image{height:250px}}
+</style>
+</head>
+<body>
+
+<header>
+<h1>🔬 THE CELL</h1>
+<p>Discover The Amazing World Of Cells</p>
+</header>
+
+<nav>
+<button class="active" onclick="show('home',this)">HOME</button>
+<button onclick="show('plant',this)">🌿 PLANT CELL</button>
+<button onclick="show('animal',this)">🐾 ANIMAL CELL</button>
+<button onclick="show('human',this)">🧬 HUMAN CELL</button>
+</nav>
+
+<main>
+
+<section id="home" class="page active">
+<h2>Welcome To The Cell World</h2>
+<div class="intro">
+<h3>What is a Cell?</h3>
+<p>
+A cell is the basic structural and functional unit of all living organisms.
+Cells contain different organelles, and each organelle has a special job
+that helps the cell stay alive and function properly.
+</p>
+</div>
+
+<div class="grid">
+<div class="card">
+<h3>🌿 Plant Cell</h3>
+<p>A plant cell has a cell wall, chloroplasts and a large central vacuole.</p>
+<button onclick="show('plant',document.querySelectorAll('nav button')[1])">Explore Plant Cell</button>
+</div>
+<div class="card">
+<h3>🐾 Animal Cell</h3>
+<p>An animal cell has a nucleus, mitochondria and many other organelles.</p>
+<button onclick="show('animal',document.querySelectorAll('nav button')[2])">Explore Animal Cell</button>
+</div>
+<div class="card">
+<h3>🧬 Human Cell</h3>
+<p>Human cells are animal cells that make up the tissues and organs of the human body.</p>
+<button onclick="show('human',document.querySelectorAll('nav button')[3])">Explore Human Cell</button>
+</div>
+</div>
+</section>
+
+<section id="plant" class="page">
+<h2>🌿 PLANT CELL</h2>
+<div class="intro">
+A plant cell is a eukaryotic cell found in plants.
+It contains special structures that help plants make their own food.
+</div>
+<img class="main-image" src="plant.jpg" alt="Plant cell model">
+
+<h2>Plant Cell Organelles</h2>
+<div class="grid">
+<div class="card"><h3>Cell Wall</h3><p>Provides protection, support and shape to the plant cell. It is mainly made of cellulose.</p><small>وظيفته: الحماية والدعم.</small></div>
+<div class="card"><h3>Cell Membrane</h3><p>Controls what enters and leaves the cell.</p><small>وظيفته: تنظيم دخول وخروج المواد.</small></div>
+<div class="card"><h3>Nucleus</h3><p>Contains DNA and controls the activities of the cell.</p><small>وظيفتها: التحكم في أنشطة الخلية.</small></div>
+<div class="card"><h3>Chloroplast</h3><p>Contains chlorophyll and absorbs light energy for photosynthesis.</p><small>وظيفتها: البناء الضوئي.</small></div>
+<div class="card"><h3>Central Vacuole</h3><p>Stores water and other substances and helps maintain cell pressure.</p><small>وظيفتها: تخزين الماء والمواد.</small></div>
+<div class="card"><h3>Mitochondria</h3><p>Produces most of the energy used by the cell through cellular respiration.</p><small>وظيفتها: إنتاج الطاقة.</small></div>
+<div class="card"><h3>Ribosomes</h3><p>Make proteins needed by the cell.</p><small>وظيفتها: تصنيع البروتين.</small></div>
+<div class="card"><h3>Golgi Apparatus</h3><p>Modifies, sorts and packages proteins and other materials.</p><small>وظيفته: تعديل وتغليف المواد.</small></div>
+<div class="card"><h3>Endoplasmic Reticulum</h3><p>Helps produce and transport proteins and lipids.</p><small>وظيفتها: التصنيع والنقل.</small></div>
+<div class="card"><h3>Cytoplasm</h3><p>A jelly-like material where organelles are located and many reactions occur.</p><small>وظيفته: وسط الخلية.</small></div>
+</div>
+</section>
+
+<section id="animal" class="page">
+<h2>🐾 ANIMAL CELL</h2>
+<div class="intro">
+An animal cell is a eukaryotic cell found in animals.
+It does not have a cell wall or chloroplasts.
+</div>
+<img class="main-image" src="animal.jpg" alt="Animal cell model">
+
+<h2>Animal Cell Organelles</h2>
+<div class="grid">
+<div class="card"><h3>Nucleus</h3><p>Controls cell activities and contains genetic information (DNA).</p><small>وظيفتها: التحكم في الخلية.</small></div>
+<div class="card"><h3>Nucleolus</h3><p>Produces components needed to make ribosomes.</p><small>وظيفتها: تكوين أجزاء الريبوسومات.</small></div>
+<div class="card"><h3>Mitochondria</h3><p>Produces energy through cellular respiration.</p><small>وظيفتها: إنتاج الطاقة.</small></div>
+<div class="card"><h3>Ribosomes</h3><p>Responsible for protein synthesis.</p><small>وظيفتها: تصنيع البروتين.</small></div>
+<div class="card"><h3>Rough ER</h3><p>Has ribosomes and helps make and transport proteins.</p><small>وظيفتها: تصنيع البروتين.</small></div>
+<div class="card"><h3>Smooth ER</h3><p>Helps produce lipids and process certain substances.</p><small>وظيفتها: تصنيع الدهون.</small></div>
+<div class="card"><h3>Golgi Apparatus</h3><p>Packages and distributes proteins and other materials.</p><small>وظيفته: التغليف والتوزيع.</small></div>
+<div class="card"><h3>Lysosomes</h3><p>Contain enzymes that break down waste and damaged cell parts.</p><small>وظيفتها: الهضم الخلوي.</small></div>
+<div class="card"><h3>Centrioles</h3><p>Help organize structures involved in cell division.</p><small>وظيفتها: المساعدة في انقسام الخلية.</small></div>
+<div class="card"><h3>Vacuoles</h3><p>Store water, nutrients and waste materials.</p><small>وظيفتها: التخزين.</small></div>
+<div class="card"><h3>Cytoskeleton</h3><p>Maintains cell shape and helps with movement and transport.</p><small>وظيفته: الدعم والحركة.</small></div>
+<div class="card"><h3>Cell Membrane</h3><p>Controls the movement of substances into and out of the cell.</p><small>وظيفته: تنظيم المرور.</small></div>
+</div>
+</section>
+
+<section id="human" class="page">
+<h2>🧬 HUMAN CELL</h2>
+<div class="intro">
+Human cells are the basic building blocks of the human body.
+There are many types of human cells, and each type has a special function.
+Human cells are animal cells.
+</div>
+<img class="main-image" src="human.jpg" alt="Human cell model">
+
+<h2>Types Of Human Cells</h2>
+<div class="grid">
+<div class="card"><h3>🧠 Nerve Cells</h3><p>Transmit electrical and chemical signals throughout the body.</p><small>الخلايا العصبية: تنقل الإشارات.</small></div>
+<div class="card"><h3>❤️ Muscle Cells</h3><p>Contract and relax to produce movement.</p><small>الخلايا العضلية: تساعد على الحركة.</small></div>
+<div class="card"><h3>🩸 Red Blood Cells</h3><p>Carry oxygen from the lungs to the body's tissues.</p><small>خلايا الدم الحمراء: تنقل الأكسجين.</small></div>
+<div class="card"><h3>🛡️ White Blood Cells</h3><p>Help protect the body against infections.</p><small>خلايا الدم البيضاء: الدفاع عن الجسم.</small></div>
+<div class="card"><h3>?? Bone Cells</h3><p>Build, maintain and repair bone tissue.</p><small>الخلايا العظمية: بناء العظام.</small></div>
+<div class="card"><h3>🧴 Skin Cells</h3><p>Form a protective barrier around the body.</p><small>خلايا الجلد: حماية الجسم.</small></div>
+</div>
+
+<div class="intro">
+<h3>Important Note</h3>
+<p>
+Human cells share many organelles with other animal cells,
+such as the nucleus, mitochondria, ribosomes and cell membrane.
+However, different human cell types have different shapes and functions.
+</p>
+</div>
+</section>
+
+</main>
+
+<footer>
+<h3>THE CELL 🔬</h3>
+<p>Learn Biology In An Easy Way</p>
+<p>© 2026 All Rights Reserved</p>
+</footer>
+
+<script>
+function show(id,btn){
+document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active'));
+if(btn) btn.classList.add('active');
+window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+
+</body>
+</html>
